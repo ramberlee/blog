@@ -1,0 +1,4 @@
+# Redirect alternative domains to primary domain
+https://blog.baobab.fi/* https://www.ramber.top/:splat 301!
+https://ramber.top/* https://www.ramber.top/:splat 301!
+https://blog-of-baobab.netlify.com/* https://www.ramber.top/:splat 301!
