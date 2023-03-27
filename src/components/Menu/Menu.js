@@ -2,10 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 require("core-js/fn/array/from");
 
-import { FaHome, FaEnvelope, FaTag, FaUser, FaRss, FaBookReader } from "react-icons/fa/";
+import { FaHome, FaEnvelope, FaTag, FaUser, FaRss, FaBookReader, FaMap, FaPen } from "react-icons/fa/";
 
 import Item from "./Item";
 import Expand from "./Expand";
+import {navigate}  from "gatsby";
 
 class Menu extends React.Component {
   constructor(props) {
@@ -14,7 +15,15 @@ class Menu extends React.Component {
 
     this.items = [
       { to: "/", label: "Home", icon: FaHome },
-      { to: "/subscribe/", label: "Subscribe", icon: FaRss },
+      { to: "", label: "Aidraw", icon: FaPen , onClick:()=>{
+          navigate('http://aidraw.ramber.top');
+        } 
+      },
+      { to: "", label: "Nav", icon: FaMap , onClick:()=>{
+          navigate('http://nav.ramber.top');
+        } 
+      },
+      // { to: "/subscribe/", label: "Subscribe", icon: FaRss },
       { to: "/contact/", label: "Contact", icon: FaEnvelope },
       { to: "/about/", label: "About", icon: FaUser },
     ];
@@ -133,7 +142,7 @@ class Menu extends React.Component {
         <nav className={`menu ${open ? "open" : ""}`} rel="js-menu">
           <ul className="itemList" ref={this.itemList}>
             {this.items.map(item => (
-              <Item item={item} key={item.label} icon={item.icon} theme={theme} />
+              <Item item={item} key={item.label} icon={item.icon} theme={theme} onClick={item.onClick}/>
             ))}
           </ul>
           {this.state.hiddenItems.length > 0 && <Expand onClick={this.toggleMenu} theme={theme} />}

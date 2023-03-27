@@ -4,18 +4,19 @@ import { FaGithub, FaStackOverflow, FaLinkedin, FaYoutube, FaYCombinator } from 
 import config from "../../../content/meta/config";
 import Codeforces from "../../images/svg-icons/codeforces.svg";
 import Unsplash from "../../images/svg-icons/unsplash.svg";
+import { disable } from "debug";
 
 const WebPresenceIcons = () => {
     return (
         <div className="wrapper">
             <div className="icons">
-                <a href={config.authorGithub} target="_blank"><FaGithub/></a>
-                <a href={config.authorStackoverflow} target="_blank"><FaStackOverflow/></a>
-                <a href={config.authorLinkedin} target="_blank"><FaLinkedin/></a>
-                <a href={config.authorYCombinator} target="_blank"><FaYCombinator/></a>
-                <a href={config.authorUnsplash} target="_blank"><Unsplash/></a>
-                <a href={config.authorCodeforces} target="_blank"><Codeforces/></a>
-                <a href={config.authorYoutube} target="_blank"><FaYoutube/></a> 
+                {config.authorGithub?<a href={config.authorGithub} target="_blank"><FaGithub/></a>:null}
+                {config.authorStackOverflow?<a href={config.authorStackOverflow} target="_blank"><FaStackOverflow/></a>:null}
+                {config.authorLinkedin?<a href={config.authorLinkedin} target="_blank"><FaLinkedin/></a>:null}
+                {config.authorYCombinator?<a href={config.authorYCombinator} target="_blank"><FaYCombinator/></a>:null}
+                {config.authorUnsplash?<a href={config.authorUnsplash} target="_blank"><Unsplash/></a>:null}
+                {config.authorCodeforces?<a href={config.authorCodeforces} target="_blank"><Codeforces/></a>:null}
+                {config.authorYoutube?<a href={config.authorYoutube} target="_blank"><FaYoutube/></a>:null}
             </div>
             <style jsx>{`
             .wrapper {

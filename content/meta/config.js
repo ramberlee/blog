@@ -5,7 +5,7 @@ module.exports = {
   siteUrl: "https://www.ramber.top",
   // pathPrefix: "",
   siteImage: "preview.jpg",
-  siteLanguage: "zh",
+  siteLanguage: "en",
 
   /* author */
   authorName: "Ramber",
@@ -15,8 +15,8 @@ module.exports = {
   // authorLinkedin: "https://linkedin.com/in/atte-juvonen-86b886113",
   // authorCodeforces: "https://codeforces.com/profile/baobab",
   // authorYoutube: "https://www.youtube.com/channel/UCfHqfHoSYL0V_fXA_JQkeLw?view_as=subscriber",
-  // authorUnsplash: "https://unsplash.com/@baobabkoodaa",
-  // authorYCombinator: "https://news.ycombinator.com/user?id=baobabKoodaa",
+  // authorUnsplash: "https://unsplash.com/@ramberlee",
+  // authorYCombinator: "https://news.ycombinator.com/user?id=ramberlee",
 
   /* header text */
   headerTitle: "Ramber",
